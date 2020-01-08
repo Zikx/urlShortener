@@ -1,0 +1,91 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>travel</title>
+    <link rel="icon" href="{% static 'main/img/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/animate.css' %} ">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href= "{% static 'main/css/owl.carousel.min.css' %}">   
+    <!-- "./css/owl.carousel.min.css"> -->
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/all.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/nice-select.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head> 
+
+<body>
+    <section class="cta_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="cta_text text-center">
+                        <h2>Url Shortener</h2>
+                        <div class="input-group">
+
+                            <form class="carousel-inner" method="post" >
+                                    {% csrf_token %}
+                                    <h3 style="font-size:60px;">{{ form.as_p }}</h3>
+                                    <button class="subs_btn" type="submit" name="button">Save</button>
+                            </form>
+
+                        </div>
+
+                        <br>
+                        <br>
+                        
+                        <div class="carousel-inner input-group">
+                            <div style="margin: auto; font-size:40px;" class="input-group-append" id="button-addon4">
+                                <a href="{{ rtnData }}">https://127.0.0.1:8000/{{ rtnData }}</a>
+                                <!-- <a href="#" class="subs_btn">Go to URL</a> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery plugins here-->
+    <!-- jquery ./js/jquery-1.12.1.min.js -->
+    <script src="{% static 'main/js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'main/js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'main/js/jquery.magnific-popup.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.nice-select.min.js' %}"></script>
+    <!-- slick js -->
+    <script src="{% static 'main/js/slick.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/contact.js' %}"></script>
+    <script src="{% static 'main/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.form.js' %}"></script>
+    <script src="{% static 'main/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'main/js/mail-script.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+</body>
+
+</html>
